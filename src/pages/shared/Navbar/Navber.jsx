@@ -1,11 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import UserDefaultPicture from "../../../assets/user.png"
+import './Navbar.css'
 
 const Navber = () => {
     const navLinks = <>
         <li><NavLink to={'/'} >Home</NavLink></li>
         <li><NavLink to={'/about'} >About</NavLink></li>
         <li><NavLink to={'/career'} >Career</NavLink></li>
+        <li><NavLink to={'/login'} >Login</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 mt-10">
