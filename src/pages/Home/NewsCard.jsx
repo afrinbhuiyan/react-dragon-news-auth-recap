@@ -23,7 +23,7 @@ const NewsCard = ({ news }) => {
                      {
                         details.length > 200
                         ? <p className="text-sm text-[#111111b3] "> {details.slice(0, 200)} 
-                        <Link to={`/news/${_id}`} className="text-[#FF8C47] font-bold hover:text-[#F75B5F] " > Read more... </Link> </p>
+                        <Link news={news} to={`/news/${_id}`} className="text-[#FF8C47] font-bold hover:text-[#F75B5F] " > Read more... </Link> </p>
                         : <p className="text-sm" >{details}</p>
                      }
 

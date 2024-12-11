@@ -3,7 +3,7 @@ import RightSideNav from "../../shared/RightSideNav/RightSideNav";
 import Navber from "../../shared/Navbar/Navber";
 import { useParams } from "react-router-dom";
 
-const News = () => {
+const News = ({news}) => {
     const {id} = useParams()
     console.log(id)
     return (
