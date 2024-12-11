@@ -1,8 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 import UserDefaultPicture from "../../../assets/user.png"
 import './Navbar.css'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navber = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleSignOut = () => {
+        logOut()
+        .then()
+        .catch()
+    }
+
     const navLinks = <>
         <li><NavLink to={'/'} >Home</NavLink></li>
         <li><NavLink to={'/about'} >About</NavLink></li>
@@ -41,17 +51,23 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-3">
-                        <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src={UserDefaultPicture} />
-                        </div>
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-3">
+                    <div className="w-10 rounded-full">
+                        <img
+                            alt="Tailwind CSS Navbar component"
+                            src={UserDefaultPicture} />
                     </div>
-                    <Link className="bg-[#111111be] text-white py-2 px-10 hover:bg-[#e93c3c]" to={'/login'} ><button>Login</button></Link>
                 </div>
+                {
+                    user ?
+                        <button onClick={handleSignOut} className="bg-[#111111be] text-white py-2 px-10 hover:bg-[#e93c3c]" >Sign Out</button>
+                        :
+                        <Link className="bg-[#111111be] text-white py-2 px-10 hover:bg-[#e93c3c]" to={'/login'} ><button>Login</button></Link>
+                }
+
             </div>
-            );
+        </div>
+    );
 };
 
-            export default Navber;
+export default Navber;
