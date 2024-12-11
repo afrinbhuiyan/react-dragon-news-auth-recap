@@ -31,29 +31,29 @@ const Register = () => {
             <Navber></Navber>
             <div className="bg-[#1111] pt-[300px] -m-96 pb-20">
                 <div className="md:w-3/4 lg:w-1/3 mx-auto bg-white mt-36 p-20 rounded-lg">
-                    <h1 className="text-2xl font-semibold text-center mb-10">Register your account</h1>
+                    <h1 className="text-2xl font-semibold text-center mb-10 pb-10 border-b ">Register your account</h1>
                     <form onSubmit={handleRegister} className="">
                         <div className="form-control mb-3">
                             <label className="label">
-                                <span className="label-text">Your Name</span>
+                                <span className="label-text font-semibold">Your Name</span>
                             </label>
                             <input type="text" placeholder="Enter your name" name="name" className="input bg-[#1111] text-xs" required />
                         </div>
                         <div className="form-control mb-3">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
+                                <span className="label-text font-semibold">Photo URL</span>
                             </label>
                             <input type="text" placeholder="Enter your Photo URL" name="photo" className="input bg-[#1111] text-xs " required />
                         </div>
                         <div className="form-control mb-3">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text font-semibold">Email</span>
                             </label>
                             <input type="email" placeholder="Enter your email address" name="email" className="input bg-[#1111] text-xs" required />
                         </div>
                         <div className="form-control mb-3">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text font-semibold">Password</span>
                             </label>
                             <input type="password" placeholder="Enter your password" name="password" className="input bg-[#1111] text-xs" required />
                             <label className="label">
